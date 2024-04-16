@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles.css"> 
+    </head>
+    <body>
+        <h1> WEB APP LIBRI - FIREBASE: FIRESTORE </h1>
+
+        <div class="content">
+
+        <form id="add-book-form"> 
+         
+        <input type="text" name="titulo" id="titulo" placeholder="Digite o titulo do livro aqui">
+        <input type="text" name="autor" id="autor" placeholder="Digite o nome do autor aqui">
+        <button>CADASTRAR</button>
+
+        </form>
+        <ul id="book-list"> </ul>
+    </div>
+    </body>
+    <!-- IMPORT DO SDK DO FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+
+    <!-- IMPORT DO SDK DO FIRESTORE -->
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+
+    <script>
+
+    /* DADOS DE CREDENCIAIS DE ACESSO AO FIREBASE */
+    const firebaseConfig = {
+        apiKey: "AIzaSyBNDfJdDXDtmVU_dg08iJ90RqrNC4rtAls",
+        authDomain: "app-libri-julia.firebaseapp.com",
+        projectId: "app-libri-julia",
+        storageBucket: "app-libri-julia.appspot.com",
+        messagingSenderId: "204530898636",
+        appId: "1:204530898636:web:78b9bd569017cf11581469",
+        measurementId: "G-R7CCXSR5EV"
+    };
+
+    /*INICIALIZA O FIRE BASE NA APLICAÇÃO WEB*/
+    firebase.initializeApp(firebaseConfig);
+
+    /*INICIALIZA A CONEXÃO COM O BANCO NOQSL FIRESTORE*/
+    const db = firebase.firestore();
+
+
+    /*TESTE DA CONEXÃO COM O FIRESTORE*/
+    //console.log('TESTE DE CONEXÃO COM O FIRESTORE');
+    //console.log(db);
+    
+
+    </script>
+
+    <script src="app.js"></script>
+
+</html>
